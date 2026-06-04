@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giriş &mdash; LinuxKernelBook 1.0.0 belgelendirmesi</title>
+  <title>1. Giriş &mdash; Gömülü Linux Sistemleri - Geliştirme ve Uygulama 1.0.0 belgelendirmesi</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -35,7 +35,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            LinuxKernelBook
+            Gömülü Linux Sistemleri - Geliştirme ve Uygulama
               <img src="_static/logo.jpeg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -48,8 +48,33 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Giriş</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#linux-un-tarihi">Linux’un Tarihi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Giriş</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gerekli-malzemeler">1.1. Gerekli Malzemeler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gomulu-sistemlere-giris">1.2. Gömülü Sistemlere Giriş</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gomulu-sistemlerin-tipik-ozellikleri">1.2.1. Gömülü Sistemlerin Tipik Özellikleri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gomulu-sistem-siniflandirmasi">1.2.2. Gömülü Sistem Sınıflandırması</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gomulu-sistemlerde-islem-birimleri">1.2.3. Gömülü Sistemlerde İşlem Birimleri</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mikroislemci-cpu">1.3. Mikroişlemci (CPU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mikrodenetleyici-mcu">1.4. Mikrodenetleyici (MCU)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soc-system-on-chip">1.5. SoC (System on Chip)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#som-system-on-module">1.6. SoM (System on Module)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sbc-single-board-computer">1.7. SBC (Single Board Computer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cisc-ve-risc-islemci-mimarileri">1.8. CISC ve RISC İşlemci Mimarileri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cisc-ve-risc-arasindaki-temel-farkliliklar">1.8.1. CISC ve RISC Arasındaki Temel Farklılıklar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#arm-islemcileri">1.9. ARM İşlemcileri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#arm-in-tarihcesi">1.9.1. ARM’ın Tarihçesi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arm-lisans-turleri">1.9.2. ARM Lisans Türleri</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arm-terminolojisi-core-cortex-ve-versiyon">1.9.3. ARM Terminolojisi: Core, Cortex ve Versiyon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arm-mimari-profilleri">1.9.4. ARM Mimari Profilleri</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#islemcilerin-bit-genisligi">1.10. İşlemcilerin Bit Genişliği</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#populer-urunlerde-arm-cortex-leri">1.11. Popüler Ürünlerde ARM Cortex’leri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kursumuzda-kullanilan-sbc-lerin-arm-cortex-leri">1.12. Kursumuzda Kullanılan SBC’lerin ARM Cortex’leri</a></li>
 </ul>
 </li>
 </ul>
@@ -60,7 +85,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">LinuxKernelBook</a>
+          <a href="index.html">Gömülü Linux Sistemleri - Geliştirme ve Uygulama</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -68,7 +93,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Giriş</li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Giriş</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/introduction.rst.txt" rel="nofollow"> Sayfa kaynağını görüntüle</a>
       </li>
@@ -79,10 +104,538 @@
            <div itemprop="articleBody">
              
   <section id="giris">
-<h1>Giriş<a class="headerlink" href="#giris" title="Link to this heading"></a></h1>
-<section id="linux-un-tarihi">
-<h2>Linux’un Tarihi<a class="headerlink" href="#linux-un-tarihi" title="Link to this heading"></a></h2>
-<p>Linux 90’ların başlarında geliştirimeye başlanmıştır.</p>
+<h1><span class="section-number">1. </span>Giriş<a class="headerlink" href="#giris" title="Link to this heading"></a></h1>
+<p>Bu bölümde temel kavramlar tanıtılacaktır.</p>
+<section id="gerekli-malzemeler">
+<h2><span class="section-number">1.1. </span>Gerekli Malzemeler<a class="headerlink" href="#gerekli-malzemeler" title="Link to this heading"></a></h2>
+<p>Kitaptaki uygulamaları gerçekleştirebilmek için gerekli olabilecek malzemeler şunlardır:</p>
+<ul class="simple">
+<li><p><strong>Raspberry Pi SBC</strong> (<em>Single Board Computer</em>): Version 3, 4 ya da 5 olabilir. Yeni satın alacakların
+Raspberry Pi 5 almalarını tavsiye ediyoruz.</p></li>
+<li><p><strong>Raspberry Pi 5 soğutucusu</strong>: Raspberry Pi 5 alınacaksa soğutucu ya da soğutuculu kılıf da alınmalı.
+Raspberry Pi 3 ve 4 için soğutucu alınmayabilir.</p></li>
+<li><p><strong>Micro SD Kart</strong>: Raspberry Pi için 64 GB yüksek hızlı micro SD kart tavsiye ediyoruz. 32 GB de
+olabilir. Ancak 32 GB’den düşüğü tavsiye etmiyoruz.</p></li>
+<li><p><strong>HDMI Kablosu</strong>: Raspberry Pi 4 ve Raspberry Pi 5 için <em>Micro HDMI -&gt; HDMI Kablosu</em>, Raspberry Pi 3
+için <em>HDMI -&gt; HDMI</em> Kablosu. Biz kursumuzda Raspberry Pi 5 kullanacağız.</p></li>
+<li><p><strong>USB Kombo Klavye + Mouse</strong></p></li>
+<li><p><strong>GPIO Breadboard Aktarma Kablosu</strong>: Raspberry Pi için.</p></li>
+<li><p><strong>Güç Kaynağı Adaptörü</strong>: Raspberry Pi 3 ve 4 için 5V/3A, Raspberry Pi 5 için 5V/5A (27W).
+Raspberry Pi 4 ve 5 USB Type C kullanıyor. Raspberry Pi 3 Micro USB kablosu kullanıyor.</p></li>
+<li><p><strong>BeagleBone Black SBC</strong> (<em>Single Board Computer</em>): Yeni satın alacak olanlar <em>BeagleBone Black 4G</em>,
+<em>BeagleBone Black Wireless</em> ya da <em>BeagleBone Black Industrial</em> alabilirler. Stokları kontrol etmek
+gerekiyor. Biz kursumuzda <em>BeagleBone Black Industrial</em> kullanacağız.</p></li>
+<li><p><strong>BeagleBone Black Güç Kaynağı</strong>: Mini USB ile 5V/500mA güç adaptörü ya da yuvarlak girişli (DC Jack)
+5V/1A güç adaptörü. Ancak BeagleBone Black USB kablo ile PC’den de güç alabilmektedir.</p></li>
+<li><p><strong>BeagleBone Black Micro SD Kartı</strong>: 16 GB olabilir.</p></li>
+<li><p><strong>BeagleBone Black HDMI Dönüştürücü</strong>: <em>Micro HDMI -&gt; HDMI</em> dönüştürücü.</p></li>
+<li><p><strong>Breadboard</strong>: Standart boy breadboard ve isteğe bağlı küçük boy breadboard’lar da olabilir.</p></li>
+<li><p><strong>Jumper Kablo Seti</strong></p></li>
+<li><p><strong>USB -&gt; UART Dönüştürücü</strong>: CP2102 çevirici modül olabilir.</p></li>
+<li><p><strong>DS3231 RTC Modülü</strong></p></li>
+<li><p><strong>USB Uzatma Kablosu</strong>: Gerekebilir.</p></li>
+<li><p><strong>Ethernet RJ45 Kablosu</strong>: Eğer SBC’nin wireless özelliği varsa buna gerek duymayabilirsiniz.</p></li>
+</ul>
+</section>
+<section id="gomulu-sistemlere-giris">
+<h2><span class="section-number">1.2. </span>Gömülü Sistemlere Giriş<a class="headerlink" href="#gomulu-sistemlere-giris" title="Link to this heading"></a></h2>
+<p>Asıl amacı bilgisayar olmayan fakat bilgisayar devresi içeren sistemlere genel olarak
+<em>gömülü sistemler</em> (<em>embedded systems</em>) denilmektedir. Yani gömülü sistemler başka amaçları
+gerçekleştirmek için tasarlanmış olan aygıtların içerisindeki bilgisayar sistemleridir. Örneğin
+elektronik tartılar, biyomedikal aygıtlar, GPS cihazları, turnike geçiş sistemleri (validatörler),
+müzik kutuları, kapı güvenlik aygıtları, otomobiller içerisindeki kontrol panelleri birer gömülü
+sistemdir. Gömülü sistemlerde en çok kullanılan programlama dili C’dir. Ancak genel amaçlı
+işletim sistemlerinin yüklenebildiği SBC’lerde (<em>Single Board Computer</em>) diğer programlama dilleri
+de kullanılabilmektedir.</p>
+<p>Gömülü sistemler gömüldüğü aygıtta belli işlevleri sağlamak için kullanılmaktadır. Örneğin
+buzdolaplarının, çamaşır makinelerinin içerisine yerleştirilen bilgisayar devreleri ve yazılımlar
+onların önemli etkinliklerini yönetmekte, kullanıcı ile arayüz oluşturabilmektedir. Günümüzde
+bilgisayar sistemi içeren aygıtlar artık her yeri sarmıştır. Bu nedenle gömülü sistemler üzerinde
+geliştirme faaliyetleri de önemli bir iş alanı haline gelmiştir.</p>
+<section id="gomulu-sistemlerin-tipik-ozellikleri">
+<h3><span class="section-number">1.2.1. </span>Gömülü Sistemlerin Tipik Özellikleri<a class="headerlink" href="#gomulu-sistemlerin-tipik-ozellikleri" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Belirli amaca yönelik işlemler:</strong></dt><dd><p>Gömülü sistemler “genel değil belirli (<em>specific</em>) amaca yönelik” işlemleri gerçekleştirmektedir.
+Yani genel amaçlı değil, özel amaçlı donanım ve yazılım hizmeti sunmaktadır. Bu sistemlerdeki
+yazılımlar da genel amaçlı değil, belli bir amacı gerçekleştirmeyi hedeflemektedir.</p>
+</dd>
+<dt><strong>Düşük bilgi işlem kapasitesi:</strong></dt><dd><p>Gömülü sistemler genellikle daha düşük bir bilgi işlem kapasitesine sahip bilgisayar
+devreleridir. Örneğin bu sistemlerde kullanılan işlemciler genel amaçlı masaüstü işlemcilerden
+genellikle daha yavaş olma eğilimindedir. Bu sistemlerdeki bellek miktarları (birincil ve ikinci
+bellekler) genel amaçlı bilgisayar sistemlerine göre daha düşük olma eğilimindedir. Dolayısıyla
+gömülü sistemlerin maliyetleri de genel amaçlı bilgisayar sistemlerine göre oldukça düşüktür.</p>
+</dd>
+<dt><strong>Düşük güç harcaması:</strong></dt><dd><p>Gömülü sistemler genellikle (fakat her zaman değil) daha düşük güç harcamaktadır. Bu durum
+onların bataryalarla beslenebilmesini dolayısıyla fiziksel taşınabilirliğini de artırmaktadır.
+Tabii genel olarak gömülü sistemler düşük güç harcama eğiliminde olan sistemler olsalar da bu
+durum her zaman böyle olmak zorunda değildir. Bazı gömülü sistemlerin gömüldüğü sistemlerde bir
+güç kullanma sorunu yoktur. (Örneğin araba kantarı zaten bu işlevi gerçekleştirmek için önemli
+bir güç harcamaktadır. Dolayısıyla bu sistemdeki gömülü sistemin harcadığı gücün önemi
+olmayabilir.)</p>
+</dd>
+<dt><strong>Gerçek zamanlı olaylar:</strong></dt><dd><p>Gömülü sistemlerin önemli bir bölümü <em>gerçek zamanlı</em> (<em>real time</em>) olaylarla ilişkilidir. Bu
+sistemlerin belli bir bölümü dış dünyadaki değişimlere karşı bir yanıt oluşturmaya çalışmaktadır.
+Örneğin bir gömülü sistem ortamdaki ısı belli bir kritik düzeye geldiğinde bir işlemi
+başlatabilir. Ya da bir gömülü sistem kalp ritmi bozulduğunda kalbe uyarılar göndererek ritim
+bozukluğunu düzeltmeye çalışabilir. Hava araçlarındaki gömülü sistemler o anki hava şartlarına
+göre bir otomatik kumanda sistemi işlevini görüyor olabilir. Tabii gömülü sistemlerin bu gerçek
+zamanlı işlem doğası bazı uygulamalarda <em>çok katı</em> (<em>hard realtime</em>) olurken bazı uygulamalarda
+<em>daha gevşek</em> (<em>soft realtime</em>) olabilmektedir.</p>
+</dd>
+<dt><strong>Minimal kullanıcı arayüzü:</strong></dt><dd><p>Gömülü sistemlerin bazılarında hiç girdi/çıktı birimi olmayabilir. Bazılarında ise girdi/çıktı
+birimi olarak <em>düğmeler</em>, basit tuş takımları, küçük LCD’ler olabilir. Oysa genel amaçlı
+bilgisayar sistemlerinde genellikle girdi/çıktı birimi olarak klavye, fare ve gelişmiş monitörler
+kullanılmaktadır. Başka bir deyişle gömülü sistemler kullanıcı arayüzü bakımından minimal olma
+eğilimindedir.</p>
+</dd>
+<dt><strong>Ucuz donanım:</strong></dt><dd><p>Gömülü sistemlerdeki donanım birimleri nispeten ucuz olma eğilimindedir. Genel amaçlı
+bilgisayarlara göre bunlar çok daha ucuz olarak temin edilebilmektedir.</p>
+</dd>
+</dl>
+</section>
+<section id="gomulu-sistem-siniflandirmasi">
+<h3><span class="section-number">1.2.2. </span>Gömülü Sistem Sınıflandırması<a class="headerlink" href="#gomulu-sistem-siniflandirmasi" title="Link to this heading"></a></h3>
+<p>Gömülü sistemler <em>işlevsel gereksinimlere göre</em> ve <em>performans gereksinimlerine</em> göre de
+sınıflandırılabilmektedir:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/embedded-classification.png"><img alt="Gömülü Sistem Sınıflandırması" src="_images/embedded-classification.png" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Gömülü sistem sınıflandırma şeması</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>1) İşlevsel Gereksinimlere Göre Sınıflandırma:</strong></p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p><strong>Gerçek Zamanlı Olan ya da Gerçek Zamanlı Olmayan Gömülü Sistemler:</strong> Bunlar <em>hard</em> ya da
+<em>soft</em> real-time olabilmektedir.</p></li>
+<li><p><strong>Bağımsız (Stand-alone) Olan ya da Bağımsız Olmayan Sistemler.</strong>
+Örneğin hesap makineleri, kapı güvenlik sistemleri, MP3 çalarlar gibi.</p></li>
+<li><p><strong>Ağ (Network) Üzerinde İşlem Yapan Gömülü Sistemler:</strong> Bunlar ağ işlemleri yapmak için
+oluşturulmuş gömülü sistemlerdir. ATM makinelerini, ADSL Router gibi aygıtları bunlara
+örnek verebiliriz.</p></li>
+<li><p><strong>Mobil Aygıtlarda Kullanılan Gömülü Sistemler:</strong> Bunlar küçük, taşınabilir aygıtlarda
+kullanılan gömülü sistemlerdir. Telefonlar, GPS cihazları, dijital kameralar bunlara örnek
+verilebilir.</p></li>
+</ol>
+</div></blockquote>
+<p><strong>2) Performans Gereksinimlerine Göre Sınıflandırma:</strong></p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Küçük Ölçekli (<em>Small Scale</em>) Gömülü Sistemler</p></li>
+<li><p>Orta Ölçekli (<em>Medium Scale</em>) Gömülü Sistemler</p></li>
+<li><p>Büyük Ölçekli (<em>Large Scale</em>) Gömülü Sistemler</p></li>
+</ol>
+</div></blockquote>
+<p>Biz burada <a class="reference external" href="https://www.ultralibrarian.com/2022/06/28/types-of-embedded-systems-characteristics-classifications-ulc">https://www.ultralibrarian.com/2022/06/28/types-of-embedded-systems-characteristics-classifications-ulc</a>
+adresindeki sınıflandırmayı kullandık. Ancak başka kaynaklarda başka türlü sınıflandırmalar da
+yapılabilmektedir.</p>
+</section>
+<section id="gomulu-sistemlerde-islem-birimleri">
+<h3><span class="section-number">1.2.3. </span>Gömülü Sistemlerde İşlem Birimleri<a class="headerlink" href="#gomulu-sistemlerde-islem-birimleri" title="Link to this heading"></a></h3>
+<p>Gömülü sistem yazılımlarının önemli bir bölümü bir işletim sistemi olmadan çalışacak biçimde
+(<em>bare-metal</em>) olarak geliştirilmektedir. Bunun önemli nedenlerinden biri bunların kapasitelerinin
+nispeten düşük olması diğeri de belirli bir amacı gerçekleştirecek biçimde tasarlanmış olmalarıdır.
+Gömülü sistemlerin bir bölümünde <em>gerçek zamanlı işletim sistemleri</em> bir bölümünde ise <em>genel
+amaçlı işletim sistemleri</em> kullanılmaktadır.</p>
+<p>Gömülü sistemlerde genel olarak üç işlem birimi kullanılmaktadır:</p>
+<ol class="arabic simple">
+<li><p>Mikrodenetleyiciler</p></li>
+<li><p>Mikroişlemciler</p></li>
+<li><p>DSP’ler</p></li>
+</ol>
+</section>
+</section>
+<section id="mikroislemci-cpu">
+<h2><span class="section-number">1.3. </span>Mikroişlemci (CPU)<a class="headerlink" href="#mikroislemci-cpu" title="Link to this heading"></a></h2>
+<p>Bir bilgisayar sisteminde aritmetik, mantıksal, bitsel işlemler ve karşılaştırma gibi bilgi işlem
+faaliyetleri <em>mikroişlemci</em> (<em>microprocessor</em>) denilen birim tarafından yapılmaktadır.
+Mikroişlemciler entegre devre biçiminde üretilmişlerdir. Mikroişlemcilere kavramsal olarak
+<em>CPU</em> (<em>Central Processing Unit</em>) de denilmektedir. Aslında genel amaçlı bir bilgisayar sisteminde
+komut çalıştıran pek çok işlemci bulunabilmektedir. CPU bu işlemcileri de programlayan <em>merkezi</em>
+(<em>central</em>) işlemcidir. Bilgisayar sisteminde yerel bazı işlemlerden sorumlu yardımcı işlemciler de
+vardır. Örneğin <em>kesme denetleyicisi</em> (<em>interrupt controller</em>), <em>disk denetleyicisi</em>
+(<em>disk controller</em>), <em>DMA denetleyicisi</em> (<em>DMA controller</em>) gibi.</p>
+</section>
+<section id="mikrodenetleyici-mcu">
+<h2><span class="section-number">1.4. </span>Mikrodenetleyici (MCU)<a class="headerlink" href="#mikrodenetleyici-mcu" title="Link to this heading"></a></h2>
+<p>Mikrodenetleyiciler tek bir chip içerisine yerleştirilmiş bir bilgisayar sistemi gibi düşünülebilirler.
+Tipik olarak bir mikrodenetleyicide bir <em>işlemci</em> (<em>processor</em>), kendi içerisinde <em>RAM ve Flash EPROM</em>,
+dış dünya ile haberleşmek için kullanılan <em>Giriş/Çıkış (IO) birimleri</em> ve bazı <em>çevre birimleri</em>
+(<em>peripherals</em>) bulunmaktadır. Mikrodenetleyicilere İngilizce <em>Microcontroller</em> ya da
+<em>Microcontroller Unit (MCU)</em> da denilmektedir.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/microcontroller-internal.png"><img alt="Mikrodenetleyici İç Yapısı" src="_images/microcontroller-internal.png" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Tipik bir mikrodenetleyicinin iç yapısı</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Mikrodenetleyicilerin işlem kapasiteleri ve içerdikleri bellek miktarları düşük olma eğilimindedir.
+Ancak bunlar çok kolay programlanıp uygulamaya sokulabilmektedir. Mikrodenetleyicilere
+<em>tek çiplik bilgisayar</em> (<em>single chip computer</em>) da denilmektedir. Mikrodenetleyiciler özellikle
+gömülü sistemlerde tercih edilmektedir. Bunların düşük güç harcaması ve ucuz olmaları en büyük
+avantajlarındandır. Gömülü uygulamalarda kullanılan pek çok mikrodenetleyici ailesi vardır.
+Örneğin:</p>
+<ul class="simple">
+<li><p>Microchip PIC Mikrodenetleyici Ailesi (Microchip)</p></li>
+<li><p>Renesas Mikrodenetleyici Ailesi (Renesas)</p></li>
+<li><p>ARM Mikrodenetleyici Ailesi (Tasarımcısı ARM Holding, ancak çok çeşitli firmalar tarafından
+üretiliyor)</p></li>
+<li><p>AVR Mikrodenetleyici Ailesi (Atmel, ancak Atmel firması 2016’da Microchip tarafından satın alındı)</p></li>
+<li><p>MSP Mikrodenetleyici Ailesi (Texas Instruments)</p></li>
+</ul>
+</section>
+<section id="soc-system-on-chip">
+<h2><span class="section-number">1.5. </span>SoC (System on Chip)<a class="headerlink" href="#soc-system-on-chip" title="Link to this heading"></a></h2>
+<p>Bazı firmalar ayrı birimler olarak tasarlanmış mikroişlemcileri, RAM’leri, ROM’ları ve diğer bazı
+çevre birimlerini tek bir entegre devrenin içerisine sıkıştırmaktadır. Bunlara genel olarak
+<em>SoC</em> (<em>System on Chip</em>) denilmektedir. SoC mikrodenetleyicilere benzese de aslında onlardan
+farklıdır. SoC’lar içerisindeki işlemcilerin ve belleklerin kapasiteleri yüksektir. Bunlar özel
+amaçlı üretilirler ve bunların devrelerde kullanılmaları mikrodenetleyiciler kadar kolay değildir.
+Bunların en önemli avantajları az yer kaplamasıdır. Örneğin Raspberry Pi kitlerinde Broadcom
+isimli firmanın 2835, 2836, 2837, 2711, 2712 numaralı SoC çipleri kullanılmıştır. SoC’ların RAM
+ve ROM bellek içermesi zorunlu değildir. Bazı SoC’lar RAM içerirken bazıları içermeyebilmektedir.
+Örneğin Raspberry Pi 1, 2, 3 modellerinde kullanılan SoC’lar RAM içerirken Raspberry Pi 4 ve 5
+modellerinde kullanılan SoC’lar RAM içermemektedir.</p>
+</section>
+<section id="som-system-on-module">
+<h2><span class="section-number">1.6. </span>SoM (System on Module)<a class="headerlink" href="#som-system-on-module" title="Link to this heading"></a></h2>
+<p>SoC kavramına benzer diğer bir kavram da <em>SoM</em> (<em>System on Module</em>) kavramıdır. SoM bir işlemci
+ve onunla ilişkili bazı birimlerin monte edildiği kartları belirtmek için kullanılmaktadır. SoM’lar
+SoC’ları içerebilir. Ancak başka birimleri de içerebilir. Örneğin bir SoM bir işlemci, buna ilişkin
+RAM, IO denetleyicisi (<em>IO controllers</em>) içeren bir kart olabilir. Örneğin <em>Raspberry Pi Pico</em> ve
+<em>Raspberry Pi Compute Module</em> birer SBC’den ziyade birer SoM olarak ele alınabilir. SoM kavramını
+zihninizde SoC ile SBC arasında bir yerde konumlandırabilirsiniz. SoM terimine yakın başka bir
+kavram da <em>modül</em> (<em>module</em>) kavramıdır. Modül bir kart üzerine yerleştirilmiş çeşitli
+bileşenlerden oluşan devrelere denilmektedir. Örneğin bir RTC kartına RTC modülü ya da bir GPS
+kartına GPS modülü de denilmektedir.</p>
+</section>
+<section id="sbc-single-board-computer">
+<h2><span class="section-number">1.7. </span>SBC (Single Board Computer)<a class="headerlink" href="#sbc-single-board-computer" title="Link to this heading"></a></h2>
+<p>Küçük bir kit (baskılı devre) üzerine monte edilmiş bilgisayarlara <em>SBC</em> (<em>Single Board Computer</em>)
+denilmektedir. Genellikle bu kitlerde SoC’lar, RAM’ler, başka çevre birimleri ve IO işlemleri için
+uçlar bulunmaktadır. Örneğin Raspberry Pi’lar, Beagleboard’lar SBC’lere örnek verilebilir.
+SBC’ler klavye, fare ve monitör takılarak bir masaüstü bilgisayar gibi kullanılabilmektedir.
+SBC’ler masaüstü bilgisayarlar gibi de kullanılabildiğinden bunlara Linux başta olmak üzere,
+Android ve Windows gibi işletim sistemleri yüklenebilmektedir.</p>
+</section>
+<section id="cisc-ve-risc-islemci-mimarileri">
+<h2><span class="section-number">1.8. </span>CISC ve RISC İşlemci Mimarileri<a class="headerlink" href="#cisc-ve-risc-islemci-mimarileri" title="Link to this heading"></a></h2>
+<p>Mikroişlemcileri tasarım mimarilerine göre <em>CISC</em> (<em>Complex Instruction Set Computers</em>) ve
+<em>RISC</em> (<em>Reduced Instruction Set Computers</em>) olmak üzere iki kısma ayırabiliriz. CISC ailesi
+işlemcilere Intel firmasının x86 ailesi işlemcilerini örnek verebiliriz. ARM, MIPS, PowerPC,
+Itanium gibi işlemciler ise tipik RISC işlemcileridir. Her ne kadar CISC ve RISC isimleri komut
+kümesi ile ilgili biçimde uydurulmuşsa da CISC ve RISC tasarımları başka bakımlardan da
+farklılık göstermektedir.</p>
+<p>Önceleri işlemcilerin (makro ve mikro) fazla sayıda makine komutuna sahip olması bir avantaj
+olarak görülüyordu. Ancak daha sonraları bunun avantajdan ziyade dezavantaj oluşturduğu anlaşıldı.
+Belli bir süreden sonra artık RISC mimarisinin CISC mimarisinden toplamda daha iyi bir tasarım
+olduğu kabul görmüştür. Bu nedenle son dönem mikroişlemci tasarımlarında hep RISC mimarisi
+kullanılmıştır.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/cisc-vs-risc.png"><img alt="CISC ve RISC Karşılaştırması" src="_images/cisc-vs-risc.png" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">CISC ve RISC mimari karşılaştırması</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="cisc-ve-risc-arasindaki-temel-farkliliklar">
+<h3><span class="section-number">1.8.1. </span>CISC ve RISC Arasındaki Temel Farklılıklar<a class="headerlink" href="#cisc-ve-risc-arasindaki-temel-farkliliklar" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>1) Komut sayısı ve karmaşıklığı:</strong></dt><dd><p>CISC işlemcilerinde fazla sayıda makine komutu bulunmaktadır. Bu işlemcilerde bazı komutlar
+temel işlemleri yaparken bazıları karmaşık işlemler yapmaktadır. Halbuki RISC işlemcilerinde
+az sayıda temel makine komutları bulunmaktadır. Bu makine komutları da daha fazla transistör
+kullanılarak daha hızlı çalışacak biçime getirilmiştir. Dolayısıyla CISC işlemcilerindeki bazı
+komutlar RISC işlemcilerinde birkaç komutla karşılanabilmektedir. Ancak bu durum sanıldığının
+tersine daha hızlı bir çalışma sağlama potansiyelindedir.</p>
+</dd>
+<dt><strong>2) Yazmaç (register) sayısı:</strong></dt><dd><p>CISC işlemcilerinde az sayıda yazmaç (<em>register</em>), RISC işlemcilerinde ise fazla sayıda yazmaç
+bulunma eğilimindedir. Yazmaç sayıları az olunca yazmaçların tekrar tekrar aynı değerlerle
+yüklenmesi gerekebilmektedir. Bu da derleyicinin nesneleri daha kısa sürede yazmaçlarda
+tutmasına yol açmaktadır. Yine CISC işlemcilerindeki bazı komutlar ancak bazı özel yazmaçlarla
+kullanılmaktadır. (Örneğin Intel x86 işlemcilerinde MUL ve DIV komutlarının bir operandı EAX
+ya da RAX yazmacında bulunmak zorundadır.) Oysa RISC işlemcilerinde her işlem her yazmaçla
+yapılabilmektedir.</p>
+</dd>
+<dt><strong>3) Komut uzunlukları:</strong></dt><dd><p>CISC işlemcilerinde komutlar farklı uzunluklarda olabilmektedir. Örneğin Intel’in x86
+ailesinde 1 byte olan makine komutları da vardır, 5 byte olan makine komutları da vardır,
+11 byte olan hatta 15 byte olan makine komutları da vardır. Halbuki RISC işlemcilerinde genel
+olarak tüm makine komutları eşit uzunluktadır. Örneğin ARM işlemcilerinde her makine komutu
+4 byte uzunluktadır. Böylece işlemci komutları bellekten daha etkin bir biçimde çekip (fetch
+işlemi) onları daha çabuk anlamlandırmaktadır. Belli bir sayı sonraki ya da önceki makine
+komutlarının yerini belirleyebilmektedir.</p>
+</dd>
+<dt><strong>4) Pipeline mekanizması:</strong></dt><dd><p>RISC işlemcilerinde pipeline mekanizması CISC işlemcilerine göre daha iyi gerçekleştirilmektedir.
+Pipeline işlemcinin bir makine komutunu çalıştırırken sonraki komutlar üzerinde hazırlık
+işlemlerini yapması anlamına gelmektedir. RISC tasarımı pipeline mekanizmasının daha iyi
+yürütülmesine olanak sağlamaktadır.</p>
+</dd>
+<dt><strong>5) Load/Store mimarisi:</strong></dt><dd><p>RISC işlemcileri load/store tarzı makine komutları kullanmaktadır. Bu işlemcilerde belleğe
+erişim yapan makine komutlarıyla aritmetik, mantıksal ve bitsel işlem yapan makine komutları
+birbirinden ayrılmıştır. Örneğin RISC işlemcilerinde ADD, SUB gibi makine komutlarının her
+iki operandı da yazmaç olmak zorundadır. Halbuki CISC işlemcilerinde bu tür makine komutlarının
+bir operandı yazmaç bir operandı bellek olabilmektedir. Örneğin:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>gibi bir işlem CISC işlemcisi ile şu makine komutlarıyla yapılabilmektedir:</p>
+<ul class="simple">
+<li><p>b’yi yazmaca çeken makine komutu</p></li>
+<li><p>Yazmaçtaki b ile bellekteki c’yi toplayan makine komutu</p></li>
+<li><p>Yazmaçtaki toplamı a’ya yerleştiren makine komutu</p></li>
+</ul>
+<p>Oysa aynı işlem RISC işlemcilerinde şöyle gerçekleştirilmektedir:</p>
+<ul class="simple">
+<li><p>b’yi yazmaca çeken makine komutu</p></li>
+<li><p>c’yi yazmaca çeken makine komutu</p></li>
+<li><p>Yazmaçlardaki b ile c’yi toplayan makine komutu</p></li>
+<li><p>Yazmaçtaki sonucu a’ya yerleştiren makine komutu</p></li>
+</ul>
+<p>Belleğe erişim komutlarıyla diğer komutların birbirinden ayrıldığı işlemcilere <em>load/store</em>
+işlemciler ya da <em>register-register</em> işlemciler de denilmektedir.</p>
+</dd>
+<dt><strong>6) Operand sayısı:</strong></dt><dd><p>RISC işlemcileri genel olarak (ancak hepsi değil) üç operandlı makine komutlarını kullanmaktadır.
+Oysa CISC işlemcileri genellikle iki operandlı makine komutlarını kullanır. İki operandlı
+makine komutlarında işlemin sonucu operand olan yazmaçlardan birine yerleştirildiği için o
+yazmaç bozulmaktadır. Böylece derleyici o yazmaçtaki değeri yeniden kullanmak istediğinde
+onu yeniden yüklemek zorunda kalmaktadır. Örneğin <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">c</span></code> işlemi 32 bit Intel
+işlemcilerinde tipik olarak şöyle gerçekleştirilmektedir:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MOV</span> <span class="n">EAX</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">a</span><span class="s1">&#39;nın adresi&gt;</span>
+<span class="n">ADD</span> <span class="n">EAX</span><span class="p">,</span> <span class="o">&lt;</span><span class="sa">b</span><span class="s1">&#39;nin adresi&gt;</span>
+<span class="n">MOV</span> <span class="o">&lt;</span><span class="n">c</span><span class="s1">&#39;nin adresi&gt;, EAX</span>
+</pre></div>
+</div>
+<p>Burada EAX işlemcinin bir yazmacıdır. ADD makine komutu bu yazmaçtaki değer ile bellekteki
+b’yi toplamakta ve sonucu yine EAX yazmacına yerleştirmektedir. Dolayısıyla EAX yazmacındaki
+a değeri artık kaybolacaktır. Bu değer yeniden kullanılmak istendiğinde ise yeniden yüklemenin
+yapılması gerekecektir. Şimdi aynı işlemi ARM işlemcilerinde yapacak olalım:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LDR</span> <span class="n">R0</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">a</span><span class="s1">&#39;nın bellek adresi&gt;</span>
+<span class="n">LDR</span> <span class="n">R1</span><span class="p">,</span> <span class="o">&lt;</span><span class="sa">b</span><span class="s1">&#39;nin bellek adresi&gt;</span>
+<span class="n">ADD</span> <span class="n">R2</span><span class="p">,</span> <span class="n">R1</span><span class="p">,</span> <span class="n">R0</span>
+<span class="n">STR</span> <span class="n">R2</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">c</span><span class="s1">&#39;nin bellek adresi&gt;</span>
+</pre></div>
+</div>
+<p>Burada R0, R1 ve R2 işlemcinin yazmaçlarıdır. Görüldüğü gibi ARM işlemcilerinde load/store
+komutları dışındaki komutlar üç operandlıdır. Bu da yazmaçlardaki değerlerin gerektiğinde
+bozulmamasına yol açmaktadır.</p>
+</dd>
+<dt><strong>7) Güç tüketimi:</strong></dt><dd><p>RISC işlemcileri yukarıda belirttiğimiz tasarım prensiplerinden dolayı toplamda daha az güç
+harcama eğilimindedir. Bu da onların mobil aygıtlarda kullanılmasının önemli bir gerekçesini
+oluşturmaktadır.</p>
+</dd>
+<dt><strong>8) Komut çalışma süreleri:</strong></dt><dd><p>RISC işlemcilerinde makine komutlarının çalışma süreleri birbirine yakındır. Ancak CISC
+işlemcilerinde makine komutlarının çalışma süreleri arasında önemli farklılıklar olabilmektedir.
+Örneğin ARM işlemcilerinde toplama, çıkartma, çarpma gibi makine komutları 1 cycle’da
+yapılmaktadır. Ancak load/store komutlarının, jump komutlarının ve özel bazı komutların çalışma
+süreleri 1 cycle’dan fazla olabilmektedir. Oysa örneğin Intel x86 işlemcilerinde komut süreleri
+değişik faktörlere bağlı olarak birbirinden çok farklılaşmaktadır.</p>
+</dd>
+</dl>
+<p>RISC ve CISC mimarilerini bir spektrum olarak düşünmek gerekir. Örneğin MIPS işlemcileri ARM
+işlemcilerine göre bu spektrumun daha fazla RISC tarafındadır. Intel’in x86 işlemcilerini kategori
+olarak CISC grubu işlemciler olarak ele alsak da Pentium işlemcileri ile birlikte bu işlemcilerde
+de RISC prensipleri gittikçe daha fazla kullanılır hale gelmiştir.</p>
+</section>
+</section>
+<section id="arm-islemcileri">
+<h2><span class="section-number">1.9. </span>ARM İşlemcileri<a class="headerlink" href="#arm-islemcileri" title="Link to this heading"></a></h2>
+<section id="arm-in-tarihcesi">
+<h3><span class="section-number">1.9.1. </span>ARM’ın Tarihçesi<a class="headerlink" href="#arm-in-tarihcesi" title="Link to this heading"></a></h3>
+<p>ARM işlemcilerinin tarihi <em>Acorn Computer</em> isimli İngiliz firmasına dayanmaktadır. Bu firma
+80’li yılların başlarında <em>BBC Micro</em> isimli 64K’lık ev bilgisayarlarını yapmıştı. Bu bilgisayarlarda
+Rockwell’in 8 bitlik 6502 işlemcileri kullanılıyordu. Firma daha sonra <em>Berkeley RISC</em> projesinden
+etkilenerek kendi RISC işlemcilerini yapmaya odaklandı. Böylece ilk ARM modelleri tasarlanmış oldu.
+Şirket 1990’da <em>Apple</em> ve <em>VLSI Technology</em> şirketleriyle ortaklıklar da kurarak ARM ismini aldı.
+(Eskiden ARM <em>Acorn RISC Machine</em> isminden kısaltılıyordu. Fakat daha sonra bu firma kurulunca bu
+kısaltma <em>Advanced RISC Machine</em> haline getirildi.) Apple firması bu yeni firmaya maddi destek
+sağlamıştır. <em>VLSI Technology</em> firması ise ekipman tedarik etmiştir. Acorn ise az sayıda tasarım
+mühendisini bu yeni firmaya aktarmıştır. 2016 yılında <em>SoftBank Group</em> ARM hisselerinin önemli bir
+bölümünü aldı. 2018’de ARM’ın Çin şubesinin yarısından fazlasını <em>Chine Investment</em> şirketine sattı.
+2020’de <em>NVidia</em>, ARM’ı SoftBank Group’tan satın almak istediyse de satış gerçekleşmedi. Bugün
+<em>SoftBank Group</em> ARM’ın %90 civarındaki hisselerine sahiptir. Geri kalan hisseleri kurucu
+ortaklarda ve halka arzdadır.</p>
+</section>
+<section id="arm-lisans-turleri">
+<h3><span class="section-number">1.9.2. </span>ARM Lisans Türleri<a class="headerlink" href="#arm-lisans-turleri" title="Link to this heading"></a></h3>
+<p>ARM (İngilizce’de de <em>ey ar em</em> biçiminde değil <em>arm</em> biçiminde okuyorlar) bir tasarım firmasıdır.
+Yani fabrikalara sahip değildir. ARM yaptığı tasarımları lisanslandırarak üretici firmalara
+satmaktadır. ARM’ın uyguladığı dört tür lisans vardır:</p>
+<dl class="simple">
+<dt><strong>Entegre Devre Lisansı</strong> (<em>Full Custom License</em>):</dt><dd><p>Bu lisans müşterinin mikrodenetleyici tasarımını kendi özel ihtiyaçlarına göre özelleştirmesine
+ve optimize etmesine olanak tanır. Örneğin Apple gibi, Qualcomm gibi, Samsung gibi firmalar bu
+lisansa sahiptir.</p>
+</dd>
+<dt><strong>Mimari Lisans</strong> (<em>Architecture License</em>):</dt><dd><p>Bu lisans ARM’nin genel mikroişlemci mimarisine erişim sağlayan lisanstır. Ancak bu lisans
+müşterinin mikrodenetleyiciyi özelleştirmesine izin vermez. Yani bu lisansa sahip olanlar
+işlemci tasarımını kullanarak üretim yapabilirler ancak onu özelleştiremezler.</p>
+</dd>
+<dt><strong>Çekirdek Lisansı</strong> (<em>Processor IP License</em>):</dt><dd><p>Bu lisans ile müşteri yalnızca belli bir ARM işlemcisini (<em>core</em>) üretebilmektedir.</p>
+</dd>
+<dt><strong>Geliştirici Lisansı</strong> (<em>Development License</em>):</dt><dd><p>Bu lisans ARM’nin tasarım araçlarına erişim sağlayan bir lisanstır. Müşteri bu araçları
+kullanarak kendi işlemcilerini tasarlayabilir.</p>
+</dd>
+</dl>
+</section>
+<section id="arm-terminolojisi-core-cortex-ve-versiyon">
+<h3><span class="section-number">1.9.3. </span>ARM Terminolojisi: Core, Cortex ve Versiyon<a class="headerlink" href="#arm-terminolojisi-core-cortex-ve-versiyon" title="Link to this heading"></a></h3>
+<p>ARM dünyasında çalışmak için bazı terimler hakkında bilgi sahibi olmak gerekir. ARM firması
+kendine özgü terimler uydurmuştur. Bu dünyada en çok karşılaşılan terimler <em>core</em>, <em>cortex</em> ve
+<em>version</em> terimleridir.</p>
+<p>ARM dünyasında <em>core</em> terimi belli bir mikroişlemci tasarımını belirtmektedir. Bu tasarım üretici
+firmalar tarafından fiziksel hale getirilmektedir. Bir grup <em>core</em> bir araya getirildiğinde ve
+işlemciyle ilişkili birtakım birimler de bunlara eklendiğinde <em>cortex</em>’ler oluşmaktadır. ARM
+firması ARM’ın klasik versiyonlarında <em>cortex</em> terimini kullanmamıştır. Cortex terimi ARM11’den
+sonra kullanılmaya başlanmıştır. Bir cortex belli sayıda <em>core</em> içerebilir. Bu <em>core</em>’lar noktalı
+sayılara (<em>floating point</em>) ilişkin işlem yapan birimlere sahip olabilirler. Cortex içerisindeki
+core’ların belli hızları vardır. Core ve cortex terimleri daha çok çip düzeyindeki mimariyi
+belirtmektedir. Cortex’lerdeki işlemcilerin (core’ların) sistem programcısını ilgilendiren
+<em>komut kümeleri</em> (<em>instruction sets</em>) de vardır. Böylece bir grup cortex belli bir komut kümesi
+ile kullanılabilecek biçimde tasarlanmıştır. Komut kümesi mimarisine <em>ARM Versiyonları</em> ya da
+İngilizcesiyle <em>ARM ISA</em> (<em>Instruction Set Architecture</em>) denilmektedir. Biz sistem programcısı
+olarak elimizdeki cortex’in hangi komut kümesini kullanan ARM versiyonuna ilişkin olduğunu
+bilmek durumundayız. Burada dikkat edilmesi gereken nokta <em>Cortex teriminin donanımsal mimariyi,
+versiyonun ise yazılımsal mimariyi belirtiyor</em> olmasıdır. O halde gömülü sistem geliştiricisi
+olarak bizim ilgilendiğimiz ARM içeren kart ile ilgili şu iki özelliği biliyor olmamız gerekir:</p>
+<ol class="arabic simple">
+<li><p>Kartımızda ARM’ın hangi cortex’i kullanılmıştır?</p></li>
+<li><p>Bu cortex’in ilişkin olduğu versiyon numarası nedir?</p></li>
+</ol>
+<p>Yukarıda da belirttiğimiz gibi farklı cortex’ler aynı versiyon numarasını kullanabilmektedir.</p>
+</section>
+<section id="arm-mimari-profilleri">
+<h3><span class="section-number">1.9.4. </span>ARM Mimari Profilleri<a class="headerlink" href="#arm-mimari-profilleri" title="Link to this heading"></a></h3>
+<p>ARM dünyasında üç mimari profili (<em>profile</em>) bulunmaktadır:</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/arm-profiles.png"><img alt="ARM Mimari Profilleri" src="_images/arm-profiles.png" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ARM mimari profilleri</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p><strong>A (Application) Profili</strong></p></li>
+<li><p><strong>R (Realtime) Profili</strong></p></li>
+<li><p><strong>M (Microcontroller) Profili</strong></p></li>
+</ol>
+<p>Bu profiller ilgili cortex’lerin hangi tür uygulamalarda ideal olarak kullanılabileceğini
+belirtmektedir. Profil isimleri cortex’lerde ve versiyon numaralarında <code class="docutils literal notranslate"><span class="pre">-</span></code> karakterinden sonra
+A, R, M harfleriyle belirtilmektedir. Örneğin <em>Cortex-A8</em> ve <em>ARMv7-A</em> gibi. A profilleri
+masaüstü işletim sistemlerinin çalıştırılabileceği, tamamen kişisel bilgisayar olarak
+kullanılabilecek cortex’leri belirtmektedir. Biz kursumuzda gömülü Linux programcısı olarak bu
+<em>A</em> profilleriyle çalışacağız. R profilleri <em>gerçek zamanlı</em> (<em>realtime</em>) uygulamalar için daha
+uygun olabilecek cortex’leri belirtmektedir. R profilleri A profillerine göre çok daha seyrek
+kullanılmaktadır. M profilleri ARM’ın mikrodenetleyici olarak kullanılan cortex’lerini
+belirtmektedir. Bu cortex’ler Linux işletim sisteminin yüklenmesine izin vermemektedir. Bu
+cortex’ler genellikle <em>bare-metal</em> programlarla ya da gerçek zamanlı işletim sistemleriyle
+kullanılmaktadır.</p>
+<p>ARM’ın iki önemli versiyonu ARMv7-A ve ARMv8-A’dır. ARMv7’ler 32 bitlik bir arayüz sunmaktadır.
+Dolayısıyla bu komut mimarisini kullanan cortex’ler 32 bitlik işlemciler içermektedir. ARMv8-A
+versiyonları ise 64 bitlik arayüz sunmaktadır. Dolayısıyla bu versiyonları kullanan cortex’ler
+64 bitlik işlemcilere ilişkindir. Ancak ARM cortex’lerinin bir grubu hem 32 bit hem de 64 bit
+olarak kullanılabilmektedir. Bu cortex’lerdeki işlemcileri kullanan işletim sistemleri 32 bitlik
+ve 64 bitlik programları zaman paylaşımlı olarak bir arada çalıştırabilmektedir.</p>
+</section>
+</section>
+<section id="islemcilerin-bit-genisligi">
+<h2><span class="section-number">1.10. </span>İşlemcilerin Bit Genişliği<a class="headerlink" href="#islemcilerin-bit-genisligi" title="Link to this heading"></a></h2>
+<p>Mikroişlemciler ilk çıktığında 8 bit işlemleri yapabiliyordu (örneğin 8080, 6800 gibi işlemciler).
+Bunlara 8 bitlik mikroişlemci deniyordu. Sonra 16 bitlik mikroişlemciler çıktı (örneğin Intel’in
+8086, 8088 işlemcileri gibi). Bunu 32 bit işlemciler izledi. Günümüzde artık ağırlıklı olarak 64
+bit işlemciler kullanılmaktadır. Peki bir işlemcinin N bitlik olmasının anlamı nedir?</p>
+<ul class="simple">
+<li><p><strong>Tek hamlede işlem kapasitesi:</strong> N bitlik bir işlemcide tek hamlede (yani tek bir makine
+komutuyla) N bit üzerinde işlem yapılabilmektedir. Örneğin 32 bitlik bir mikroişlemcide tek
+bir makine komutu ile 32 bitlik iki sayıyı toplayıp çarpabiliriz.</p></li>
+<li><p><strong>Fiziksel RAM adresleme kapasitesi:</strong> N bitlik bir mikroişlemci genellikle (ama her zaman
+değil) 2<sup>N</sup> uzunlukta bir fiziksel RAM’i adresleyebilmektedir. Örneğin 32 bitlik bir
+mikroişlemciye biz tipik olarak 2<sup>32</sup> = 4 GB’lik bir RAM bağlayabiliriz. Elimizdeki RAM
+64 GB olsa bile 32 bit bir mikroişlemci bu RAM’in ancak ilk 4 GB’sini kullanabilmektedir. Tabii
+bu durum her zaman böyle değildir. Örneğin 8086 işlemcisi 16 bit olduğu halde 2<sup>16</sup>
+değil 2<sup>20</sup> uzunluğunda (1 MB) fiziksel belleği adresleyebiliyordu. Benzer biçimde 64
+bitlik Intel ve AMD işlemcileri 2<sup>64</sup> değil 2<sup>48</sup> uzunluğundaki RAM’leri
+adresleyebilmektedir.</p></li>
+<li><p><strong>CPU-RAM arası transfer genişliği:</strong> N bitlik bir mikroişlemcide genellikle işlemci ile RAM
+arasında transfer N bit olarak yapılmaktadır. Örneğin 32 bitlik bir mikroişlemcide tek bir
+makine komutuyla RAM’den CPU’ya 32 bitlik bir veri transfer edilebilir. Ancak bu durum her
+zaman böyle değildir. Örneğin 16 bitlik Intel 8086 işlemcisi bellek transferlerini 16 bit
+olarak yaparken 8088 işlemcisi 8 bit yapıyordu.</p></li>
+</ul>
+<p>8 bitten 16 bite geçişte ve 16 bitten 32 bite geçişte çok fark edilir bir hızlanma yaşanmıştır.
+Ancak 32 bitten 64 bite geçişte hızlanma öncekiler kadar olmamıştır. Bunun nedeni 64 bitlik
+işlemlerin aslında yoğun olarak yapılmadığındandır. Ancak 32 bitten 64 bite geçişin en önemli
+etkisi işlemciye bağlanabilecek RAM miktarı üzerinde olmuştur. Örneğin elimizde 8 GB RAM’li
+Raspberry Pi 5 olsun. Buradaki ARM cortex’i hem 32 bit hem de 64 bit işlemci gibi
+çalışabilmektedir. Dolayısıyla biz bu kartımıza 32 bitlik de 64 bitlik de Linux yükleyebiliriz.
+Ancak 32 bitlik Linux işletim sistemi işlemciyi 32 bit modda çalıştıracağı için işletim sistemi
+8 GB RAM’in ancak 4 GB’sini kullanabilecektir. Bu 8 GB RAM’in tamamından istifade edebilmemiz
+için işlemcinin 64 bit modunda çalıştırılması dolayısıyla da işletim sisteminin 64 bit olması
+gerekecektir.</p>
+<p>Peki 128 bitlik işlemciler tasarlansa, bunlar daha hızlı bir çalışma sunmaz mı? Neden 128 bitlik
+işlemciler tasarlanmıyor? 128 bitlik tamsayı işlemlerine çok nadir gereksinim duyulmaktadır.
+2<sup>128</sup> uzunluğunda RAM zaten şu an için erişilmesi imkânsız bir RAM miktarıdır. O halde
+işlemcilerin 64 bitten 128 bite çıkartılmasının şu an için önemli bir faydası olmayacaktır.
+Ancak tabii gelecekte böyle bir ihtiyaç ortaya çıkabilecektir.</p>
+</section>
+<section id="populer-urunlerde-arm-cortex-leri">
+<h2><span class="section-number">1.11. </span>Popüler Ürünlerde ARM Cortex’leri<a class="headerlink" href="#populer-urunlerde-arm-cortex-leri" title="Link to this heading"></a></h2>
+<p>Popüler ürünlerde kullanılan ARM cortex’leri şunlardır:</p>
+<dl class="simple">
+<dt><strong>iPhone 14:</strong></dt><dd><p>Apple’ın A15 isimli SoC’unu kullanmaktadır. Bu SoC’un içerisinde Apple’ın ARMv8.6-A
+versiyonunu kullanan Avalanche Cortex’i vardır. Buradaki core’lar yalnızca 64 biti
+desteklemektedir.</p>
+</dd>
+<dt><strong>iPhone 15:</strong></dt><dd><p>Apple’ın A16 isimli SoC’unu kullanmaktadır. Bu SoC’un içerisinde Apple’ın ARMv8.6-A
+versiyonunu kullanan Everest Cortex’i vardır. Buradaki core’lar yalnızca 64 biti
+desteklemektedir.</p>
+</dd>
+<dt><strong>Apple M1 SoC:</strong></dt><dd><p>Apple’ın ARMv8.4-A versiyonunu kullanan FireStorm isimli Cortex’i vardır. Buradaki core’lar
+yalnızca 64 biti desteklemektedir.</p>
+</dd>
+<dt><strong>Apple M2 SoC:</strong></dt><dd><p>Apple’ın ARMv8.6-A versiyonunu kullanan Avalanche ve Blizzard isimli Cortex’leri vardır.
+Buradaki core’lar yalnızca 64 biti desteklemektedir.</p>
+</dd>
+<dt><strong>Apple M3 SoC:</strong></dt><dd><p>Apple’ın ARMv8.6-A versiyonunu kullanan Avalanche ve Blizzard isimli Cortex’leri vardır.
+Buradaki core’lar yalnızca 64 biti desteklemektedir.</p>
+</dd>
+<dt><strong>Samsung Galaxy S24:</strong></dt><dd><p>Qualcomm firmasının Snapdragon-8 SoC’unu kullanmaktadır. Bu SoC içerisinde ARMv9-A versiyonunu
+kullanan Cortex A715 bulunmaktadır.</p>
+</dd>
+<dt><strong>Redmi Note 11:</strong></dt><dd><p>Xiaomi firmasının ürünüdür. Qualcomm Snapdragon-685 SoC’unu kullanmaktadır. Bu SoC’un
+içerisinde ARMv8.2-A versiyonuna ilişkin Cortex A78 bulunmaktadır.</p>
+</dd>
+</dl>
+</section>
+<section id="kursumuzda-kullanilan-sbc-lerin-arm-cortex-leri">
+<h2><span class="section-number">1.12. </span>Kursumuzda Kullanılan SBC’lerin ARM Cortex’leri<a class="headerlink" href="#kursumuzda-kullanilan-sbc-lerin-arm-cortex-leri" title="Link to this heading"></a></h2>
+<p>Bu kursta kullanacağımız SBC’lerin üzerinde bulunan ARM cortex’leri ve bunların versiyon
+numaraları şöyledir:</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/sbc-arm-table.png"><img alt="Kursumuzda Kullanılan SBC'ler" src="_images/sbc-arm-table.png" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Kursumuzda kullanılan SBC’lerin ARM cortex karşılaştırması</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt><strong>Raspberry Pi 3:</strong></dt><dd><p>BCM2837 SoC’u kullanılmıştır. Bu SoC’un içerisinde ARMv8-A versiyonuna ilişkin Cortex-A53
+bulunmaktadır. Bu cortex’teki işlemciler hem 32 bit hem de 64 bit modda çalışabilmektedir.
+Dolayısıyla bunlara 32 bit ve 64 bit Linux sistemleri yüklenebilmektedir.</p>
+</dd>
+<dt><strong>Raspberry Pi 4:</strong></dt><dd><p>BCM2711 SoC kullanılmıştır. Bu SoC’un içerisinde ARMv8-A versiyonuna ilişkin Cortex-A72
+bulunmaktadır. Bu cortex’teki işlemciler hem 32 bit hem de 64 bit modda çalışabilmektedir.
+Dolayısıyla bunlara 32 bit ve 64 bit Linux sistemleri yüklenebilmektedir.</p>
+</dd>
+<dt><strong>Raspberry Pi 5:</strong></dt><dd><p>BCM2712 SoC kullanılmıştır. Bu SoC’un içerisinde ARMv8.2-A versiyonuna ilişkin Cortex-A76
+bulunmaktadır. Bu cortex’teki işlemciler hem 32 bit hem de 64 bit modda çalışabilmektedir.
+Dolayısıyla bunlara 32 bit ve 64 bit Linux sistemleri yüklenebilmektedir.</p>
+</dd>
+<dt><strong>BeagleBone Black 4G ve BeagleBone Black Wireless:</strong></dt><dd><p>Texas Instruments firmasının Sitara-AM3358 SoC’unu kullanmaktadır. Bu SoC’un içerisinde
+Cortex-A8 kullanılmıştır. Bu cortex 32 bit işlemcilerden oluşmaktadır. Bunların kullandığı
+komut mimarisi de ARMv7-A’dır. BeagleBone Black’ler 32 bit ARM işlemcilerini kullandığı için
+bunlara yalnızca 32 bit Linux sistemleri yüklenebilmektedir.</p>
+</dd>
+</dl>
 </section>
 </section>
 
