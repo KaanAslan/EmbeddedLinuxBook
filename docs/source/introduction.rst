@@ -165,7 +165,7 @@ amaçlı işletim sistemleri* kullanılmaktadır.
 
 Gömülü sistemlerde genel olarak üç işlem birimi kullanılmaktadır:
 
-1. Mikrodenetleyiciler
+1. Mikrodenetleyiciler60%
 2. Mikroişlemciler
 3. DSP'ler
 
